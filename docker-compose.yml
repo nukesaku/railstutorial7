@@ -5,10 +5,12 @@ services:
     image: mysql:8
     # データの永続化（ホスト側のtmp/dbディレクトリにマウントする）
     volumes:
-      - ./app/db/mysql_data:/var/lib/mysql
+      # mysqlのデータを永続化するために、ホスト側のディレクトリをマウントする
+      - ./.db/mysql_data:/var/lib/mysql
     # 環境変数の指定（初期設定値）
     environment:
       MYSQL_ROOT_PASSWORD: password
+      TZ: 'Asia/Tokyo'
   web:
     # Dockerfile のあるディレクトリのパスを指定（imageかbuildを必ず指定する必要がある）
     build: .
