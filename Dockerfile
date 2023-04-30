@@ -21,7 +21,7 @@ COPY . $APP_HOME
 ARG BUNDLER_VERSION='2.3.14'
 RUN gem install bundler -v ${BUNDLER_VERSION}
 # Install Rails
-ARG RAILS_VERSIONS='7.0.3'
+ARG RAILS_VERSIONS='7.0.4'
 RUN gem install rails -v ${RAILS_VERSIONS}
 # Add a script to be executed every time the container starts.
 COPY entrypoint.sh /usr/bin/
