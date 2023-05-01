@@ -1,0 +1,8 @@
+Started GET "/" for 172.20.0.1 at 2023-05-01 18:02:37 +0900
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ApplicationController#hello as HTML
+  Rendering html template
+  Rendered html template (Duration: 0.1ms | Allocations: 20)
+Completed 200 OK in 120ms (Views: 65.7ms | ActiveRecord: 0.0ms | Allocations: 3332)
+
+
