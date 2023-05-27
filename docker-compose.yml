@@ -11,6 +11,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: password
       TZ: 'Asia/Tokyo'
+    ports:
+      - "3306:3306"
   web:
     # Dockerfile のあるディレクトリのパスを指定（imageかbuildを必ず指定する必要がある）
     build: .
